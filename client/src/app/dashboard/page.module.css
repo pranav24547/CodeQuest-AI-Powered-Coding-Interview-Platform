@@ -1,0 +1,179 @@
+.loading {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+}
+
+.page {
+    min-height: calc(100vh - 64px);
+    padding: 40px 24px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    animation: fadeInUp 0.5s ease;
+}
+
+.header {
+    margin-bottom: 32px;
+}
+
+.userCard {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--gradient-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 800;
+    color: white;
+}
+
+.header h1 {
+    font-size: 26px;
+    font-weight: 800;
+}
+
+.email {
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+/* ── Stats Grid ────────────────────────────────────── */
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.statCard {
+    padding: 24px;
+    text-align: center;
+}
+
+.statIcon {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.statValue {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 2px;
+}
+
+.statLabel {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ── Panels ────────────────────────────────────────── */
+.panels {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.panel {
+    padding: 24px;
+}
+
+.panel h2 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* ── Topic Bars ────────────────────────────────────── */
+.topicList {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.topicRow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.topicName {
+    font-size: 13px;
+    font-weight: 600;
+    min-width: 120px;
+}
+
+.topicBar {
+    flex: 1;
+    height: 6px;
+    background: var(--bg-glass-strong);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.topicFill {
+    height: 100%;
+    border-radius: 3px;
+    transition: width 0.6s ease;
+}
+
+/* ── Submissions ───────────────────────────────────── */
+.submissionList {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.submissionRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 14px;
+    background: var(--bg-glass);
+    border-radius: var(--radius-sm);
+}
+
+.subTitle {
+    font-size: 13px;
+    font-weight: 600;
+    margin-right: 8px;
+}
+
+.subLang {
+    font-size: 11px;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+}
+
+.emptyText {
+    color: var(--text-muted);
+    font-size: 13px;
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .statsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .panels {
+        grid-template-columns: 1fr;
+    }
+}
